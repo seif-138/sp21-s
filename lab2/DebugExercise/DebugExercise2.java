@@ -66,7 +66,7 @@ public static int addm(int a,int b){
         int i = 0;
         int sum = 0;
         while (i < x.length) {
-            sum = sum + addm(sum, x[i]);
+            sum =addm(sum, x[i]);  // sum=5  arr[i]=2   adm=7
             i = i + 1;
         }
         return sum;
