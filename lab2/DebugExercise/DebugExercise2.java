@@ -89,5 +89,11 @@ public static int addm(int a,int b){
 
         int sumOfElementwiseMaxes = sumOfElementwiseMaxes(a, b);
         System.out.println(sumOfElementwiseMaxes);
+
+        int[] c = {2,0,10,14};
+        int[] d = {-5,5,20,30};
+
+        int sumOfElementwiseMaxes2 = sumOfElementwiseMaxes(c, d);
+        System.out.println(sumOfElementwiseMaxes2);
     }
 }
