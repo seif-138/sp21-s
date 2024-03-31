@@ -126,6 +126,10 @@ public class ArrayDeque <T>{
         size=size+1;
     }
     public T removeFirst(){
+        if(size==0){
+            return null;
+        }
+
         T i=items[front];
         if(front== items.length-1){
             front=0;
@@ -148,6 +152,9 @@ public class ArrayDeque <T>{
          */
     }
     public T removeLast(){
+        if(size==0){
+            return null;
+        }
         T i=items[rear];
         if(rear==0){
             rear=items.length-1;
