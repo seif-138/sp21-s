@@ -60,6 +60,7 @@ public class GuitarHeroLite {
 //            stringC.tic();
             for (int i=0;i<keyboard.length();i++){
                 guitar[i].tic();
+                //
             }
         }
     }
