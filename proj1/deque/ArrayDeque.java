@@ -1,7 +1,7 @@
 package deque;
 import org.junit.*;
 
-public class ArrayDeque <T>{
+public class ArrayDeque <T> implements Deque<T>{
     private int size;
 
     private T[] items;
@@ -77,9 +77,9 @@ public class ArrayDeque <T>{
     public void addLast(T item){
         if(size==0){
            front=0;
-            rear=rear+1;
             items[rear]=item;
             size=size+1;
+
         }
         else if(size== items.length){
             resize();
@@ -177,6 +177,16 @@ public class ArrayDeque <T>{
 
          */
     }
+    private Integer indx(int index){
+        if(index>=size){
+            return null;
+        }
+        if((front+index)>= items.length){
+            int indx=(front+index)- items.length;
+            return indx;
+        }
+        return front+index;
+    }
     public T get(int index){
         if(index>=size){
             return null;
@@ -197,6 +207,9 @@ public class ArrayDeque <T>{
             return true;
         }
         return false;
+    }
+    public void modify(int index,T item){
+        items[indx(index)]=item;
     }
 
 }

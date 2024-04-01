@@ -1,6 +1,6 @@
 package deque;
 
-public class LinkedListDeque<T> {
+public class LinkedListDeque<T> implements Deque<T> {
         private class node{
             public node previous;
             public node next;
@@ -29,6 +29,7 @@ public class LinkedListDeque<T> {
             this.addLast((T)other.get(i));
         }
     }
+
     public void addFirst(T item){
         size=size+1;
 
@@ -75,6 +76,7 @@ public class LinkedListDeque<T> {
         }
         System.out.println();
     }
+
     public T removeFirst(){
         if(this.isEmpty()){
             return null;
